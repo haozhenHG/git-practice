@@ -1,0 +1,93 @@
+好的，让我们从零开始，通过一系列步骤来设置你的本地 Git 仓库与 GitHub 上的 `git-practice` 仓库关联，并使用分支相关操作。以下是详细步骤：
+
+### 步骤 1: 创建本地仓库
+
+1. 在你的计算机上，创建一个新的文件夹，例如 `git-practice`。
+2. 打开终端或命令提示符，导航到这个新文件夹。
+
+### 步骤 2: 初始化 Git 仓库
+
+在终端中，运行以下命令来初始化一个新的 Git 仓库：
+
+```bash
+git init
+```
+
+#### 步骤 3: 添加远程仓库
+
+将远程仓库添加到你的本地仓库。假设你的 GitHub 仓库 URL 是 `https://github.com/your-username/git-practice.git`：
+
+```bash
+git remote add origin https://github.com/your-username/git-practice.git
+```
+
+#### 步骤 4: 创建并切换到新分支
+
+创建并切换到一个新分支，例如 `new-feature`：
+
+```bash
+git checkout -b new-feature
+```
+
+#### 步骤 步骤 5: 修改文件并提交更改
+
+在本地仓库中，创建一个新文件，例如 `example.txt`，并添加一些内容。然后，提交这些更改：
+
+```bash
+git add example.txt
+git commit -m "Add example file"
+```
+
+#### 步骤 6: 推送更改到 GitHub
+
+将你的本地分支推送到 GitHub：
+
+```bash
+git push origin new-feature
+```
+
+#### 步骤 7: 在 GitHub 上创建 Pull Request
+
+1. 登录到你的 GitHub 账户。
+2. 导航到 `git-practice` 仓库。
+3. 点击 "Pull requests" 标签。
+4. 点击 "New pull request"。
+5. 选择 `new-feature` 分支作为源分支，`main` 分支作为目标分支。
+6. 点击 "Create pull request"。
+
+### 步骤 8: 在 GitHub 上合并 Pull Request
+
+1. 在 Pull Request 页面，点击 "Merge pull request" 按钮。
+2. 确认合并。
+
+### 步骤 9: 切换回主分支
+
+在本地，切换回 `main` 分支：
+
+```bash
+git checkout main
+```
+
+#### 步骤 10: 合并新特性
+
+将 `new-feature` 分支合并到 `main` 分支：
+
+```bash
+git merge new-feature
+```
+
+#### 步骤 11: 删除分支
+
+合并完成后，你可以删除本地和远程的 `new-feature` 分支：
+
+```bash
+git branch -d new-feature
+git push origin --delete new-feature
+```
+
+### 步骤 12: 验证更改
+
+1. 访问你的 GitHub 仓库页面，确认 `example.txt` 文件已更新。
+2. 确认 `new-feature` 分支已从分支列表中删除。
+
+通过这些步骤，你将学会如何在本地使用 Git 进行分支操作，并通过 GitHub 来查看和验证这些操作的结果。这些基本操作是使用 Git 和 GitHub 进行版本控制和协作开发的基础。
